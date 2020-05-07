@@ -9,3 +9,4 @@ The relevant issue is [125](https://github.com/FortAwesome/angular-fontawesome/i
    index.ts:4:13 - error TS2345: Argument of type 'IconPack' is not assignable to parameter of type 'IconDefinitionOrPack'.
      Type 'IconPack' is missing the following properties from type 'IconDefinition': icon, prefix, iconName
    ```
+3. Make `IconDefinition` and `IconPack` independent from the core icons, so even if there are multiple instances of `fontawesome-common-types` package, the types are still assignable to each other because of duck typing.
